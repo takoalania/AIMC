@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="account-container">
+            <button class="account-button" id="account-button" onclick="openForm()">
+                <img class="avatar" src="./images/profile.svg"/>
+                Account
+            </button>
+        </div>
+        <div class="header-container">
+            <img src="./images/logo.png"/>
+            <div class="right-container">
+                <div class="nav-menu">
+                    <a href="">MAGAZINE</a>
+                    <a href="">ADVENTURES</a>
+                    <a href="">FAQ</a>
+                    <a href="">About us</a>
+                </div>
+                <div class="search-container">
+                    <input class="search" type="text" placeholder="SEARCH" name="search">
+                    <button class="search-button" onclick="hideSearch()">
+                        <img src="./images/search.png"/>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="form-popup" name="myForm" id="myForm">
+        <form action="" class="form-container">
+            <h1 class="form-title">Sign Up</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input class="email" type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input class="password" type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input class="password" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <button type="submit" class="btn" onclick="checkForm()">Sign Up</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    <section class="teaser-section">
+        <div class="teaser-container">
+            <h2>WKND Adventures</h2>
+            <p>Join us on one of our next adventures. Browse our list of curated experiences and sign up for one when you’re ready to explore with us.</p>
+            <button class="default-button" onclick="scrollDown()">View adVentures</button>
+        </div>
+    </section>
+    <section class="slider">
+        <div class="slider-arrows">
+            <a class="previous" onclick="previousSlide()">
+                <img src="./images/slider/arrow_left.png"/>
+            </a>
+            <a class="next" onclick="nextSlide()">
+                <img class="slider-image" src="./images/slider/arrow_right.png"/>
+            </a>
+        </div>
+        <!-- The first slide -->
+        <div class="item">
+            <div class="item-left">
+                <div class="item-text">
+                    <h2>Last Article</h2>
+                    <img src="images//underline.png"/>
+                    <p>Camping in Western Australia</p>
+                    <p>A vibrant red, dusty highway stretches out before us into what seems like infinity, at the far reach of our sights it distorts and shimmers from the afternoon heat, fading into the blue of the horizon.</p>
+                </div>
+                <button class="default-button slider-button"><a  href="https://wikipedia.com">Read More</a></button>
+            </div>
+            <img class="slider-image" src="./images/slider/image-1.png">
+        </div>
+        <!-- The second slide -->
+        <div class="item">
+            <div class="item-left">
+                <div class="item-text">
+                    <h2>Last Article</h2>
+                    <img src="images//underline.png"/>
+                    <p>Camping in Western Australia</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque delectus quisquam voluptatem quos earum, ullam voluptatum veritatis possimus quaerat sed exercitationem porro tenetur reiciendis ipsa, odit facilis, culpa dignissimos quod?</p>
+                </div>
+                <button class="default-button slider-button"><a  href="https://wikipedia.com">Read More</a></button>
+            </div>
+            <img src="./images/slider/image-1.png">
+        </div>
+        <!-- The third slide -->
+        <div class="item">
+            <div class="item-left">
+                <div class="item-text">
+                    <h2>Last Article</h2>
+                    <img src="images//underline.png"/>
+                    <p>Camping in Western Australia</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque delectus quisquam voluptatem quos earum, ullam voluptatum veritatis possimus quaerat sed exercitationem porro tenetur reiciendis ipsa, odit facilis, culpa dignissimos quod?</p>
+                </div>
+                <button class="default-button slider-button"><a href="https://wikipedia.com">Read More</a></button>
+            </div>
+            <img class="slider-image" src="./images/slider/image-1.png">
+        </div>
+    </section>
+    <section class="recent-articles-section">
+        <div class="title-container">
+            <h2>Recent Articles</h2>
+            <img src="images//underline.png"/>
+        </div>
+        <div class="articles-container">
+                
+        </div>
+    </section>
+    <section class="adventures">
+        <div class="title-container">
+            <h2>Next Adventures</h2>
+            <img src="images//underline.png"/>
+        </div>
+        <section class="teaser-section adventures-section">
+            <div class="teaser-container">
+                <h2 class="adventure-title">Climbing New Zealand</h2>
+                <p class="adventure-description">Let us help you make your New Zealand climbing vacation a memory you will cherish forever! Come join us for a guided rock climbing adventure in the mountains that trained Sir Edmund Hilary.
+                </p>
+                <button class="default-button"><a  href="https://wikipedia.com">Read More</a></button>
+            </div>
+        </section>
+    </section>
+    <section class="places-section">
+        <div class="title-container">
+            <h2>Where do you want to go?</h2>
+        </div>
+        <div class="places-wrapper">
+            <div class="places-container">
+                
+        </div>
+        <button class="places-button">EXPLORE ALL</button>
+        </div>
+    </section>
+    <section class="inbox-section">
+        <div class="inbox-left-container">
+            <img src="./images/inbox.png"/>
+        </div>
+        <div class="inbox-right-container">
+            <p>Want WKND in your inbox?</p>
+            <p>Be the first to know about new trips, fresh gear, and co-op offers. We’re a good penpal. Promise.</p>
+            <div class="input-container">
+                <input id="inbox-mail" type="email" placeholder="Your email Adress"/>
+                <button class="inbox-button" onclick="validateEmail()">SIGN UP</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <img class="footer-logo" src="./images/logo-white.png"/>
+            <div class="right-container">
+                <div class="footer-nav-menu">
+                    <a href="">MAGAZINE</a>
+                    <a href="">ADVENTURES</a>
+                    <a href="">FAQ</a>
+                    <a href="">About us</a>
+                </div>
+            </div>
+            <div class="social-media-wrapper">
+                <a href="https://instagram.com"><img src="./images//icons/instagram.png"/></a>
+                <a href="https://facebook.com"><img src="./images//icons/facebook.png"/></a>
+                <a href="https://twitter.com"><img src="./images//icons/twitter.png"/></a>
+            </div>
+        </div>
+        <p>Ⓒ 2019, WKND Demo Site. Intended only as a demonstration of Adobe Experience Manager</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
